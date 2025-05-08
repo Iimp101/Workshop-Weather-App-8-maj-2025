@@ -7,25 +7,59 @@
 	justify-content: center;
 	margin-bottom: 2rem;
 
+	form {
+		width: 100%;
+		max-width: 500px;
+	}
+
 	.input-group {
-		background-color: rgba(255, 255, 255, 0.9); // vit med genomskinlighet
-		border-radius: 0.5rem;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		display: flex;
+		align-items: center;
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius: 0.75rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		transition: box-shadow 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+		}
 
 		input {
+			flex: 1 1 auto;
+			font-size: 1.2rem;
+			padding: 0.75rem 1rem;
 			background-color: transparent;
 			color: #222;
 			border: none;
-			outline: none;
 
 			&::placeholder {
-				color: #666;
+				color: #555;
+			}
+
+			&:focus {
+				outline: none;
+				background-color: rgba(255, 255, 255, 0.95);
 			}
 		}
 
 		.btn {
+			flex-shrink: 0;
+			font-size: 1.2rem;
+			padding: 0.75rem 1.2rem;
+			background-color: #28a745;
+			border: none;
+			color: white;
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
+
+			&:hover {
+				background-color: #218838;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+			}
 		}
 	}
 }
