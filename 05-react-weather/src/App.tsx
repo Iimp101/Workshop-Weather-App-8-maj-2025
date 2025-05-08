@@ -34,15 +34,16 @@ function App() {
 		<div id="app" className="container">
 			<SearchCity onSearch={handleSearch} />
 
+			{error && (
+				<div className="alert alert-danger text-center w-100 mt-3" role="alert">
+					{error}
+				</div>
+)}
+
+
 			{isLoading && <LoadingGifWeather />}
 
-			{error && (
-				<p className="text-danger mt-3 text-center" style={{ fontWeight: "bold" }}>
-					{error}
-				</p>
-			)}
-
-			{!isLoading && weather && <Forecast weather={weather} />}
+			{!isLoading && weather && !error && <Forecast weather={weather} />}
 		</div>
 	);
 }
