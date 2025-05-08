@@ -1,10 +1,6 @@
-/**
- * Forecast
- */
-
- #forecast {
+#forecast {
 	margin-top: 2rem;
-	
+
 	#location {
 		font-size: 1.2em;
 		text-transform: uppercase;
@@ -37,10 +33,6 @@
 	}
 }
 
-/**
- * Väderbaserade teman
- */
-
 .weather-clear {
 	background: linear-gradient(to bottom, #fefcea, #f1da36); // soligt
 	border-radius: 1rem;
@@ -48,27 +40,27 @@
 }
 
 .weather-clouds {
-	background: linear-gradient(to bottom, #d7d2cc, #304352); // molnigt
+	background: linear-gradient(to bottom, #d7d2cc, #304352);
 	border-radius: 1rem;
 	padding: 1rem;
 	color: white;
 }
 
 .weather-rain {
-	background: linear-gradient(to bottom, #4e54c8, #8f94fb); // regn
+	background: linear-gradient(to bottom, #4e54c8, #8f94fb); 
 	border-radius: 1rem;
 	padding: 1rem;
 	color: white;
 }
 
 .weather-snow {
-	background: linear-gradient(to bottom, #e6f0f3, #ffffff); // snö
+	background: linear-gradient(to bottom, #e6f0f3, #ffffff); 
 	border-radius: 1rem;
 	padding: 1rem;
 }
 
 .weather-thunderstorm {
-	background: linear-gradient(to bottom, #373b44, #4286f4); // åska
+	background: linear-gradient(to bottom, #373b44, #4286f4); 
 	border-radius: 1rem;
 	padding: 1rem;
 	color: white;
