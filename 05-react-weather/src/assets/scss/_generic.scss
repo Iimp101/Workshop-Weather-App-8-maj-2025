@@ -81,15 +81,67 @@ body.weather-clouds {
 }
 
 body.weather-default {
-	background: url("https://images.unsplash.com/photo-1534068731687-d70176c2e7d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background: url("https://images.unsplash.com/photo-1534068731687-d70176c2e7d5?q=80&w=1974&auto=format&fit=crop")
+		no-repeat center center fixed;
+	background-size: cover;
+	color: white;
+}
+
+body.time-night {
+	background: url("https://img.freepik.com/free-photo/beautiful-photo-sea-sky_58702-11348.jpg?t=st=1746722806~exp=1746726406~hmac=4e40133671254fff2cb82ba0c2d166128919977a171ac0c2acaeafbe41523dc1&w=900")
+		no-repeat center center fixed;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	filter: brightness(0.9) contrast(1.1);
+	transition: background 0.5s ease-in-out;
+}
+
+
+.alert-danger {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+body.time-day {
+	background-color: #f3f3f3;
+	transition: background 0.5s ease-in-out;
+}
+
+body.time-night {
+	background-color: #0c0c2c;
+	filter: brightness(0.85) contrast(1.1);
+}
+
+body.time-night.weather-clear {
+	background: url("https://img.freepik.com/free-photo/inspiring-view-sunrise-light_23-2148851738.jpg?t=st=1746722717~exp=1746726317~hmac=ed5b05a4a6f5495f315fc9c85193006d57058d833e6e0f4dc31b87e93642223c&w=996");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+body.time-night.weather-rain {
+	background: url("https://images.unsplash.com/photo-1576749288264-207936efb479?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+body.time-night.weather-clouds {
+	background: url("https://img.freepik.com/free-photo/beautiful-photo-sea-sky_58702-11348.jpg?t=st=1746722806~exp=1746726406~hmac=4e40133671254fff2cb82ba0c2d166128919977a171ac0c2acaeafbe41523dc1&w=900")
+		no-repeat center center fixed;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	color: white;
 }
 
-.alert-danger {
-	width: 100%;
-	max-width: 400px;
-	margin: 0 auto;
+body.time-night.weather-snow {
+	background: url("https://images.unsplash.com/photo-1551582045-01a3981b326d?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+		no-repeat center center fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #f1f1f1;
 }

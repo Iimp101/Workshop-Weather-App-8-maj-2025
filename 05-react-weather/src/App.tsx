@@ -19,9 +19,21 @@ function App() {
 			const data = await getCurrentWeather(city);
 			setWeather(data);
 
-			document.body.className = "";
+			document.body.classList.forEach((cls) => {
+				if (cls.startsWith("weather-") || cls.startsWith("time-")) {
+					document.body.classList.remove(cls);
+				}
+			});
+
 			const condition = data.weather[0].main.toLowerCase();
 			document.body.classList.add(`weather-${condition}`);
+
+			const now = data.dt;
+			const sunrise = data.sys.sunrise;
+			const sunset = data.sys.sunset;
+			const timeOfDay = now >= sunrise && now < sunset ? "time-day" : "time-night";
+			
+			document.body.classList.add(timeOfDay);
 		} catch (err) {
 			console.error("failed to fetch weather", err);
 			setError("Staden hittades inte. Kontrollera stavningen.");

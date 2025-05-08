@@ -8,6 +8,15 @@ const Forecast = ({ weather }: { weather: WeatherReport | null }) => {
 	const condition = weather.weather[0];
 	const weatherClass = condition.main.toLowerCase();
 
+	const dateAndTime = new Date(weather.dt * 1000);
+	const formatedDateAndTime = dateAndTime.toLocaleDateString("sv-SE", {
+		year: "numeric",
+		month: "2-digit",
+		day: "2-digit",
+		hour: "2-digit",
+		minute: "2-digit",
+	}); 
+
 	return (
 		<div id="forecast" className={`mt-4 weather-${weatherClass}`}>
 			<div className="card">
@@ -27,6 +36,9 @@ const Forecast = ({ weather }: { weather: WeatherReport | null }) => {
 						💧 Luftfuktighet: {weather.main.humidity}%
 					</p>
 				</div>
+				<p className="weather-updated text-muted small mt-4 mb-0 text-center">
+					🕒 Senast uppdaterad: {formatedDateAndTime}
+				</p>				
 			</div>
 		</div>
 	);
