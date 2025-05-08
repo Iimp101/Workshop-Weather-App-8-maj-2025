@@ -32,6 +32,11 @@ const SearchCity: React.FC<SearchCityProps> = ( {onSearch} ) => {
 						🔍
 					</button>
 				</div>
+			{city.length > 0 && city.length < 3 && (
+				<p className="alert alert-warning py-2 px-3 mt-2 text-center" style={{ fontSize: "0.9rem" }}>
+					⚠️ Ange minst 3 bokstäver
+				</p>
+			)}
 			</form>
 		</div>
 	);
