@@ -1,0 +1,90 @@
+/**
+ * Generic styles
+ */
+
+@import "typography";
+
+html,
+body,
+#root {
+	min-height: 100vh;
+}
+
+body {
+	background-color: #1c1c1c;
+	color: white;
+}
+
+#app {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
+
+body.weather-clear {
+	background:
+		linear-gradient(to bottom, rgba(255, 223, 93, 0.5), rgba(255, 255, 255, 0.2)),
+		url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background 0.5s ease-in-out;
+}
+
+body.weather-clouds {
+	background: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=1600&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background 0.5s ease-in-out;
+}
+
+body.weather-rain {
+	background: url('https://images.unsplash.com/photo-1527766833261-b09c3163a791?auto=format&fit=crop&w=1600&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background 0.5s ease-in-out;
+}
+
+body.weather-snow {
+	background: url('https://images.unsplash.com/photo-1487383298905-ee8a6b373ff9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background 0.5s ease-in-out;
+}
+
+body.weather-thunderstorm {
+	background: url('https://images.unsplash.com/photo-1429552077091-836152271555?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background 0.5s ease-in-out;
+}
+
+body.weather-clear,
+body.weather-snow {
+	color: #222;
+}
+
+body.weather-rain,
+body.weather-thunderstorm,
+body.weather-clouds {
+	color: white;
+}
+
+body.weather-default {
+	background: url("https://images.unsplash.com/photo-1534068731687-d70176c2e7d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+}
+

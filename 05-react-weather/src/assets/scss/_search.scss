@@ -1,0 +1,31 @@
+/**
+ * Search
+ */
+
+ #search-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+
+	.input-group {
+		background-color: rgba(255, 255, 255, 0.9); // vit med genomskinlighet
+		border-radius: 0.5rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+		input {
+			background-color: transparent;
+			color: #222;
+			border: none;
+			outline: none;
+
+			&::placeholder {
+				color: #666;
+			}
+		}
+
+		.btn {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}
